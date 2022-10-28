@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.searchbar {
+  background: rgb(40, 40, 40);
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+}
+
+.btnSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.btnClose {
+  right: 48px;
+  position: absolute;
+  border: none;
+  background: transparent;
+  color: gray;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.btnCloseActive {
+  visibility: visible;
+}
