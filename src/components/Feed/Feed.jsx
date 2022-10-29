@@ -14,6 +14,8 @@ const Feed = () => {
     content = <p>Loading...</p>
   } else if (isSuccess) {
     content = JSON.stringify(movies)
+  } else if (isError) {
+    content = <p>{JSON.stringify(error)}</p>
   }
 
   return (

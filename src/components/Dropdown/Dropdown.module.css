@@ -1,0 +1,25 @@
+.dd {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dd > ul {
+  margin-top: 100px;
+  list-style: none;
+  padding: 0;
+}
+
+.dd > ul > li {
+  color: #999999;
+}
+
+.ddOpen {
+  visibility: visible;
+  opacity: 1;
+  background: #303030;
+}

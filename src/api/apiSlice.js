@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const API_URL = 'https://api.kinopoisk.dev'
-const API_KEY = 'ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06'
+const API_KEY = 'EB1YAT9-6SA486G-K79D36W-W4NZXCX'
 
 export const apiSlice = createApi({
   reducerPath: 'api',
