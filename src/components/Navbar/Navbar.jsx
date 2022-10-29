@@ -17,11 +17,11 @@ const Navbar = () => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
+        <Dropdown isOpen={isOpen} />
         <FontAwesomeIcon className={styles.icon} icon={faBars} />
         <Link to="/" className={styles.logo}>
           KINOBOOM
         </Link>
-        <Dropdown isOpen={isOpen} />
       </div>
       <Searchbar />
       <Link>Войти</Link>

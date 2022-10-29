@@ -7,10 +7,10 @@
 
 .searchbar {
   background: rgb(40, 40, 40);
-  width: 350px;
-  height: 40px;
+  width: 600px;
+  height: 56px;
   font-size: 20px;
-  padding: 0 16px;
+  padding: 0px 16px;
   border: none;
   border-radius: 5px;
   outline: 0;
@@ -18,17 +18,20 @@
 }
 
 .btnSearch {
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
   border: none;
   background: transparent;
-  color: white;
+  color: #999999;
   cursor: pointer;
 }
 
 .btnClose {
-  right: 48px;
+  font-size: 1.5rem;
+  right: 64px;
   position: absolute;
   border: none;
   background: transparent;
