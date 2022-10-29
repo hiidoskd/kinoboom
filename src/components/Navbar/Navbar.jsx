@@ -18,7 +18,9 @@ const Navbar = () => {
         onMouseLeave={() => setIsOpen(false)}
       >
         <FontAwesomeIcon className={styles.icon} icon={faBars} />
-        <Link className={styles.logo}>KINOBOOM</Link>
+        <Link to="/" className={styles.logo}>
+          KINOBOOM
+        </Link>
         <Dropdown isOpen={isOpen} />
       </div>
       <Searchbar />

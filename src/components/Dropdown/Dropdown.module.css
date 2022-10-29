@@ -9,12 +9,17 @@
 }
 
 .dd > ul {
-  margin-top: 100px;
+  margin-top: 150px;
   list-style: none;
   padding: 0;
 }
 
 .dd > ul > li {
+  margin-top: 1rem;
+}
+
+.dd > ul > li > a {
+  font-size: 1.4rem;
   color: #999999;
 }
 
