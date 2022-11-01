@@ -5,12 +5,10 @@ import Feed from './components/Feed/Feed'
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Feed />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Feed />} />
+      </Routes>
     </BrowserRouter>
   )
 }

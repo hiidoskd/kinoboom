@@ -1,4 +1,5 @@
 import { useGetMoviesQuery } from '../../api/apiSlice'
+import MovieList from '../MovieList/MovieList'
 
 const Feed = () => {
   const {
@@ -13,17 +14,12 @@ const Feed = () => {
   if (isLoading) {
     content = <p>Loading...</p>
   } else if (isSuccess) {
-    content = JSON.stringify(movies)
+    content = <MovieList movies={movies} title={'Рекомендуемые фильмы'} />
   } else if (isError) {
     content = <p>{JSON.stringify(error)}</p>
   }
 
-  return (
-    <div>
-      <h1>Feed</h1>
-      {content}
-    </div>
-  )
+  return <main>{content}</main>
 }
 
 export default Feed
