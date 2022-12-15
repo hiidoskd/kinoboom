@@ -7,9 +7,9 @@
 
 .searchbar {
   background: rgb(40, 40, 40);
-  width: 600px;
-  height: 56px;
-  font-size: 20px;
+  width: 400px;
+  height: 36px;
+  font-size: 1rem;
   padding: 0px 16px;
   border: none;
   border-radius: 5px;
@@ -18,7 +18,7 @@
 }
 
 .btnSearch {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;

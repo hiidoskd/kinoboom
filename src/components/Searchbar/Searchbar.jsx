@@ -7,17 +7,13 @@ import { faMagnifyingGlass, faClose } from '@fortawesome/free-solid-svg-icons'
 const Searchbar = () => {
   const [value, setValue] = useState('')
 
-  const handleChange = e => {
-    setValue(e.target.value)
-  }
-
   return (
     <form className={styles.form}>
       <input
         type="text"
         className={styles.searchbar}
         value={value}
-        onChange={handleChange}
+        onChange={(e) => setValue(e.target.value)}
         placeholder="Поиск..."
       />
       <button
