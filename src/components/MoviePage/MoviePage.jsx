@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useGetMovieByIdQuery } from '../../api/apiSlice'
+import YouTubeEmbed from '../YouTubeEmbed/YouTubeEmbed'
 import styles from './MoviePage.module.css'
 
 const MoviePage = () => {
@@ -25,8 +26,9 @@ const MoviePage = () => {
             <div className={styles.mainContent}>
               <div className={styles.leftColumn}>
                 <div className={styles.poster}>
-                  <img src={movie.poster.previewUrl} />
+                  <img src={movie.poster.previewUrl} alt="poster" width="300" />
                 </div>
+                <YouTubeEmbed embedUrl={movie.videos?.trailers[1].url} />
               </div>
               <div className={styles.rightColumn}>
                 <div className={styles.mainInfo}>
@@ -106,6 +108,7 @@ const MoviePage = () => {
                 </div>
               </div>
             </div>
+            <div className={styles.tabs}></div>
           </div>
         </div>
       </div>

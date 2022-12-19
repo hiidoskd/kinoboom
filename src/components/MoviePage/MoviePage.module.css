@@ -35,6 +35,9 @@
   box-sizing: border-box;
 }
 .leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .rightColumn {
 }
