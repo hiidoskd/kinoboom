@@ -42,15 +42,5 @@
 .rightColumn {
 }
 
-.row {
-  display: flex;
-  align-items: baseline;
-  padding: 8px 0;
-  font-size: 13px;
-}
-.rowItem {
-  width: 160px;
-}
-
 .rowItemSecond > a {
 }

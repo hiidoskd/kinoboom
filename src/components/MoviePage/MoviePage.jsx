@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useGetMovieByIdQuery } from '../../api/apiSlice'
+import MovieInfo from '../MovieInfo/MovieInfo'
 import YouTubeEmbed from '../YouTubeEmbed/YouTubeEmbed'
 import styles from './MoviePage.module.css'
 
@@ -28,7 +29,7 @@ const MoviePage = () => {
                 <div className={styles.poster}>
                   <img src={movie.poster.previewUrl} alt="poster" width="300" />
                 </div>
-                <YouTubeEmbed embedUrl={movie.videos?.trailers[1].url} />
+                <YouTubeEmbed embedUrl={movie?.videos?.trailers[0]?.url} />
               </div>
               <div className={styles.rightColumn}>
                 <div className={styles.mainInfo}>
@@ -43,66 +44,7 @@ const MoviePage = () => {
                       <button>Буду смотреть</button>
                       <button>...</button>
                     </div>
-                    <div className={styles.generalInfo}>
-                      <h3>О фильме</h3>
-                      <div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Год производства</div>
-                          <div className={styles.rowItem}>{movie.year}</div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Страна</div>
-                          <div className={styles.rowItem}>
-                            {movie.countries.map((country, idx) => (
-                              <Fragment key={country.name}>
-                                {idx ? ', ' : ''}
-                                {country.name}
-                              </Fragment>
-                            ))}
-                          </div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Жанр</div>
-                          <div className={styles.rowItem}>
-                            {movie.genres.map((genre, idx) => (
-                              <Fragment key={genre.name}>
-                                {idx ? ', ' : ''}
-                                {genre.name}
-                              </Fragment>
-                            ))}
-                          </div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Слоган</div>
-                          <div className={styles.rowItem}>{movie.slogan}</div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Сборы</div>
-                          <div className={styles.rowItem}>
-                            {movie.fees.world.currency}
-                            {movie.fees.world.value}
-                          </div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Дата премьеры</div>
-                          <div className={styles.rowItem}>
-                            {movie.premiere.world}
-                          </div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Рейтинг</div>
-                          <div className={styles.rowItem}>
-                            {movie.ageRating}+
-                          </div>
-                        </div>
-                        <div className={styles.row}>
-                          <div className={styles.rowItem}>Длительность</div>
-                          <div className={styles.rowItem}>
-                            {movie.movieLength} минут
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <MovieInfo movie={movie} />
                   </div>
                   <div className={styles.infoRight}></div>
                 </div>
