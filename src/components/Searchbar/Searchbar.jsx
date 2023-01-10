@@ -1,14 +1,23 @@
 import { useState } from 'react'
-import styles from './Searchbar.module.css'
-import classNames from 'classnames'
+import { useNavigate } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faClose } from '@fortawesome/free-solid-svg-icons'
+import styles from './Searchbar.module.css'
+import classNames from 'classnames'
 
 const Searchbar = () => {
+  const navgigate = useNavigate()
+
   const [value, setValue] = useState('')
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    navgigate(`/search/${value}`)
+  }
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <input
         type="text"
         className={styles.searchbar}

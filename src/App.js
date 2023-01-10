@@ -5,6 +5,7 @@ import Layout from './components/Layout/Layout'
 import MoviePage from './components/MoviePage/MoviePage'
 import MovieRoom from './components/MovieRoom/MovieRoom'
 import Navbar from './components/Navbar/Navbar'
+import Search from './components/Search/Search'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Feed />} />
           <Route path="/movie/:id" element={<MoviePage />} />
           <Route path="/room/:id" element={<MovieRoom />} />
+          <Route path="/search/:id" element={<Search />} />
         </Routes>
       </div>
     </BrowserRouter>
